@@ -1,0 +1,271 @@
+:root {
+    --primary-color: #3f82f5;
+    --secondary-color: #ff9933;
+    --black-color: #18181b;
+    --white-color: #ffffff;
+    --grey-color: #b8b8b8;
+}
+
+body {
+    background-color: var(--black-color);
+    color: var(--white-color);
+    font-family: 'lexend', Tahoma, Geneva, Verdana;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: var(--black-color);
+    text-align: center;
+    margin-top: 20px;
+}
+
+header img {
+    width: 120px;
+}
+
+/* NAVIGATION */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 10px;
+}
+
+nav ul li a {
+    color: var(--grey-color);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* GARIS PEMISAH */
+hr {
+    border: none;
+    height: 0.5px;
+    background-color: var(--primary-color);
+    margin: 50px 0px; 
+}
+
+.white {
+    background-color: var(--white-color);
+    height: 0.5px;
+    margin: 5px 0px;
+}
+
+/* MAIN CONTENT */
+.pp{
+    width: 120px;
+    margin: auto;
+    border-radius: 10px;
+    justify-content: center;
+    display: block;
+}
+main {
+    padding: 5px 250px;
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    line-height: 28px;
+}
+
+main h2 {
+    text-align: center;
+    font-size: 35px;
+    color: var(--primary-color);
+}
+
+h3{
+    text-align: center;
+}
+
+section p {
+    text-align: center;
+    color: var(--white-color);
+}
+
+/* PORTOFOLIO */
+.portofolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.portofolio img {
+    width: 140px;
+    margin: 2px;
+    cursor: pointer;
+    object-fit: cover;
+    image-rendering: auto;
+    aspect-ratio: 1/1;
+}
+
+/* Overlay untuk gambar besar */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: scale(1.8);
+}
+
+.overlay img {
+    max-width: 50%;
+    max-height: 50%;
+}
+
+/* COMMISSION PRICELIST */
+.pricelist {
+    display: flex;
+    flex-wrap: wrap;
+}
+table{
+    border-radius: 10px;
+}
+
+th:first-child {
+    border-top-left-radius: 10px;
+}
+
+th:last-child {
+    border-top-right-radius: 10px;
+}
+
+tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+td, th {
+    border: 1px solid var(--black-color);
+}
+
+th, td {
+    padding: 6px 10px;
+    text-align: left;
+}
+
+tr{
+    background-color:rgba(63, 130, 245, 0.200);
+}
+
+/* CARD */
+.card {
+    background-color: rgb(255, 153, 51, 0.500);
+    width: 100%;
+    height: 100px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card p {
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--black-color);
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--black-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+}
+
+.medsos {
+    display: block;
+    text-decoration: none;
+}
+
+.medsos a {
+    color: var(--white-color);
+}
+
+.medsos a:not(:last-child) {
+    margin-right: 1rem;
+}
+
+/* MEDIA QUERY UNTUK TABLET */
+@media screen and (max-width: 1024px) {
+    main {
+        padding: 30px 80px;
+        font-size: 15px;
+    }
+
+    main h2 {
+        font-size: 28px;
+    }
+
+    .portofolio img {
+        width: 120px;
+    }
+
+    table, th, td {
+        font-size: 15px;
+    }
+
+    .card {
+        height: 90px;
+    }
+
+    .card p {
+        font-size: 20px;
+    }
+}
+
+/* MEDIA QUERY UNTUK HANDPHONE */
+@media screen and (max-width: 768px) {
+    header img {
+        width: 150px;
+    }
+    nav ul {
+        display: inline;
+        flex-direction: column;
+        padding: 0;
+        margin: 5px 0;
+    }
+    main {
+        padding: 17px;
+        font-size: 14px;
+    }
+    main h2 {
+        font-size: 24px;
+    }
+    .portofolio img {
+        width: 100px;
+    }
+    table, th, td {
+        font-size: 14px;
+    }
+    .card {
+        height: 70px;
+    }
+    .card p {
+        font-size: 18px;
+    }
+    #close-btn {
+        top: auto;
+        bottom: 10px;
+        right: 50%;
+        transform: translateX(50%);
+    }
+}
