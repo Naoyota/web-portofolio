@@ -73,6 +73,7 @@ hr {
     border-radius: 10px;
     justify-content: center;
     display: block;
+    border: 5px solid var(--grey-color);
 }
 main {
     padding: 5px 250px;
@@ -190,7 +191,7 @@ tr{
 /* FOOTER */
 footer {
     background-color: var(--black-color);
-    color: var(--white-color);
+    color: var(--black-color);
     text-align: center;
     padding: 15px;
     width: 100%;
