@@ -298,20 +298,20 @@ footer {
 }
 
 /* Medsos */
-@media (max-width: 400px) {
-    .social-grid a {
-      font-size: 12px;
-      padding: 15px 10px;
-      margin-left: 3px;
+@media screen and (max-width: 768px) {
+    .social-grid,
+    .social-grid-2 {
+        grid-template-columns: 1fr; /* Satu kolom */
+        margin-right: auto; /* Biar rata tengah */
     }
-}
-@media (max-width: 400px) {
+
+    .social-grid a,
     .social-grid-2 a {
-      font-size: 12px;
-      padding: 10px;
-      margin-left: 27px;
+        font-size: 16px; /* Biar tetap nyaman dibaca */
+        padding: 12px;
     }
 }
+
 
 /* MEDIA QUERY UNTUK HANDPHONE */
 @media screen and (max-width: 768px) {
